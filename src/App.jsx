@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
@@ -13,10 +13,13 @@ import AddItem from './AddItem.jsx';
 import SearchItem from './SearchItem.jsx';
 
 function App() {
-  const [items, setItems] = useState(() => {
-  const savedItems = localStorage.getItem("to-do-list");
-  return savedItems ? JSON.parse(savedItems) : [];
-});
+  const [items, setItems] = useState([]);
+  useEffect(() => {
+    const savedItems = JSON.parse(localStorage.getItem("to-do-list"));
+    if (savedItems) {
+      setItems(savedItems);
+    }
+  }, []);
     
     const handleCheck = (id) => {
   
