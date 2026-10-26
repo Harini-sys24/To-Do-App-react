@@ -13,8 +13,10 @@ import AddItem from './AddItem.jsx';
 import SearchItem from './SearchItem.jsx';
 
 function App() {
-  const [items,setItems] = useState(
-    JSON.parse(localStorage.getItem("to-do-list")))
+  const [items, setItems] = useState(() => {
+  const savedItems = localStorage.getItem("to-do-list");
+  return savedItems ? JSON.parse(savedItems) : [];
+});
     
     const handleCheck = (id) => {
   
