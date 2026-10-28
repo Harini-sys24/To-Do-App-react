@@ -2,13 +2,29 @@
   "items": [
     {
       "id": "1",
-      "checked": false,
+      "checked": true,
       "item": "Study React"
     },
     {
-      "id": "2",
+      "id": "H2c6k6uLwlw",
       "checked": true,
-      "item": "Complete assignments"
+      "item": "ai"
+    },
+    {
+      "id": "dctu-ATZ_OI",
+      "checked": true,
+      "item": "ml"
+    },
+    {
+      "id": "1XS5DDeU3Pw",
+      "checked": false,
+      "item": "api"
+    },
+    {
+      "checked": true,
+      "item": "git",
+      "id": "Br1WLV2csY4"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

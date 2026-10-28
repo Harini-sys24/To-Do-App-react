@@ -5,7 +5,7 @@ import ItemsList from './ItemsList.jsx'
 const Content = ({ items, handleCheck, handleTrash }) => {
     
     return(
-      <main>
+      <>
         {(items.length !== 0)? (
           <ItemsList
             items={items}
@@ -15,7 +15,7 @@ const Content = ({ items, handleCheck, handleTrash }) => {
         ) : (
         <p>Your List is empty</p>
       )}
-      </main>
+      </>
 
     )
     
